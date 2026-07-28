@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-ink text-white font-body antialiased;
+  background-image: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(250,204,21,0.06), transparent);
+}
+
+::selection {
+  background: #FACC15;
+  color: #0F0F0F;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0F0F0F;
+}
+::-webkit-scrollbar-thumb {
+  background: #2A2A2E;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FACC15;
+}
+
+/* Scroll-margin so anchor links land below the sticky navbar */
+section[id] {
+  scroll-margin-top: 88px;
+}
+
+@layer utilities {
+  .grain {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  }
+
+  /* Torn / notched steel-plate edge used for dish & review cards — a nod to
+     the stainless plates served at roadside kadais */
+  .plate-edge {
+    clip-path: polygon(
+      6% 0%, 94% 0%, 100% 8%, 100% 92%, 94% 100%,
+      6% 100%, 0% 92%, 0% 8%
+    );
+  }
+
+  .text-outline {
+    -webkit-text-stroke: 1.5px #FACC15;
+    color: transparent;
+  }
+
+  .bg-noise {
+    position: relative;
+  }
+  .bg-noise::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  }
+}
