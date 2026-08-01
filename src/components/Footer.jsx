@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
-import { FiPhone, FiMapPin, FiMail } from 'react-icons/fi'
+import { FiPhone, FiMapPin } from 'react-icons/fi'
 import { FaInstagram, FaFacebookF, FaWhatsapp, FaYoutube } from 'react-icons/fa'
+import logo3 from '../assets/image.png'
 
 const QUICK_LINKS = [
   { label: 'Home', href: '/#home' },
@@ -10,12 +11,7 @@ const QUICK_LINKS = [
   { label: 'Contact', href: '/#contact' },
 ]
 
-const SOCIALS = [
-  { icon: FaInstagram, href: 'https://instagram.com', label: 'Instagram' },
-  { icon: FaFacebookF, href: 'https://facebook.com', label: 'Facebook' },
-  { icon: FaWhatsapp, href: 'https://wa.me/919876543210', label: 'WhatsApp' },
-  { icon: FaYoutube, href: 'https://youtube.com', label: 'YouTube' },
-]
+
 
 export default function Footer() {
   return (
@@ -23,12 +19,18 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
         {/* Logo + blurb */}
         <div>
-          <Link to="/#home" className="flex items-center gap-3 mb-4 w-fit">
-            <span className="w-11 h-11 rounded-xl bg-yolk rotate-[-4deg] flex items-center justify-center border-2 border-ink">
-              <span className="font-display font-black text-ink text-lg">RK</span>
-            </span>
-            <span className="font-display font-extrabold text-white text-lg">
-              ROTTU <span className="text-yolk">KADAI</span>
+          <Link to="/#home" className="flex items-center gap-3 group shrink-0">
+            <img
+              src={logo3}
+              alt="Riyan's Rottu Kadai"
+              className="w-14 h-14 sm:w-16 sm:h-16 rounded-3xl object-contain transition-transform duration-300 group-hover:scale-105"
+            />
+
+            <span className="flex flex-col leading-none">
+              <span className="font-display font-extrabold text-yolk text-base sm:text-lg tracking-wide">
+                RIYAN'S  <span className="text-white">ROTTU KADAI</span>
+              </span>
+
             </span>
           </Link>
           <p className="text-smoke text-sm leading-relaxed max-w-xs">
@@ -56,49 +58,57 @@ export default function Footer() {
           <ul className="flex flex-col gap-4">
             <li className="flex items-start gap-3 text-smoke text-sm">
               <FiMapPin className="shrink-0 mt-0.5 text-yolk" />
-              No. 24, Ranganathan Street, T. Nagar, Chennai 600017
+              No. 3, Ramanujam St,
+              Shiva Shankar Nagar,
+              Secretariat Colony,
+              Pallavaram,
+              Chennai - 600043
             </li>
             <li className="flex items-center gap-3 text-smoke text-sm">
               <FiPhone className="shrink-0 text-yolk" />
-              <a href="tel:+919876543210" className="hover:text-yolk transition-colors">+91 98765 43210</a>
+              <a
+                href="tel:+919566013048"
+                className="hover:text-yolk transition-colors"
+              >
+                +91 9566013048
+              </a>
             </li>
-            <li className="flex items-center gap-3 text-smoke text-sm">
-              <FiMail className="shrink-0 text-yolk" />
-              <a href="mailto:hello@rottukadai.com" className="hover:text-yolk transition-colors">hello@rottukadai.com</a>
-            </li>
+
           </ul>
         </div>
 
         {/* Socials */}
         <div>
-          <p className="font-display font-bold text-white text-sm uppercase tracking-widest mb-5">Follow Us</p>
-          <div className="flex items-center gap-3">
-            {SOCIALS.map((s) => (
-              <a
-                key={s.label}
-                href={s.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={s.label}
-                className="w-10 h-10 rounded-full bg-ink-raised border border-ink-border flex items-center justify-center text-white/70 hover:text-ink hover:bg-yolk hover:border-yolk transition-all duration-300"
-              >
-                <s.icon size={16} />
-              </a>
-            ))}
-          </div>
+          <p className="font-display font-bold text-white text-sm uppercase tracking-widest mb-5">Timing</p>
+
           <p className="text-smoke text-xs mt-6 leading-relaxed">
-            Open daily, 11:00 AM – 11:30 PM
+            Open daily, 12:30 PM – 11:45 PM
           </p>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto pt-6 border-t border-ink-border flex flex-col sm:flex-row items-center justify-between gap-3">
-        <p className="text-smoke text-xs">
-          © {new Date().getFullYear()} ROTTU KADAI. All rights reserved.
-        </p>
-        <p className="text-smoke text-xs">
-          Crafted with <span className="text-yolk">♥</span> in Chennai
-        </p>
+      {/* Designed By */}
+      <div className="max-w-7xl mx-auto border-t border-ink-border pt-8">
+        <div className="flex justify-center mb-6">
+          <a
+            href="https://ziauddeen-zia.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-yolk text-ink border border-yolk font-display font-bold shadow-soft hover:bg-white hover:text-ink hover:shadow-glow transition-all duration-300 active:scale-95"
+          >
+            <span>Designed by &lt;Zia/&gt; ↗</span>
+          </a>
+        </div>
+
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="text-smoke text-xs">
+            © {new Date().getFullYear()} ROTTU KADAI. All rights reserved.
+          </p>
+
+          <p className="text-smoke text-xs">
+            Crafted with <span className="text-yolk">♥</span> in Chennai
+          </p>
+        </div>
       </div>
     </footer>
   )

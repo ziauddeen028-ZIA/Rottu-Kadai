@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import { FiMenu, FiX, FiPhoneCall } from 'react-icons/fi'
+import { HashLink } from 'react-router-hash-link';
+import logo3 from '../assets/image.png'
 
 const NAV_LINKS = [
   { label: 'Home', href: '/#home' },
@@ -11,8 +13,8 @@ const NAV_LINKS = [
   { label: 'Contact', href: '/#contact' },
 ]
 
-const PHONE_DISPLAY = '+91 98765 43210'
-const PHONE_TEL = '+919876543210'
+const PHONE_DISPLAY = '+919566013048'
+const PHONE_TEL = '+919566013048'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -32,25 +34,25 @@ export default function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        scrolled
-          ? 'bg-ink/90 backdrop-blur-lg shadow-soft border-b border-ink-border'
-          : 'bg-transparent border-b border-transparent'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-[9999] w-full transition-all duration-300 ${scrolled
+        ? 'bg-ink/95 backdrop-blur-lg shadow-soft border-b border-ink-border'
+        : 'bg-ink'
+        }`}
     >
       <nav className="max-w-7xl mx-auto flex items-center justify-between px-5 sm:px-8 h-16 sm:h-20">
         {/* Logo — hand-painted tin signboard mark */}
         <Link to="/#home" className="flex items-center gap-3 group shrink-0">
-          <span className="relative w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-yolk rotate-[-4deg] flex items-center justify-center shadow-glow-sm group-hover:rotate-0 transition-transform duration-300 border-2 border-ink">
-            <span className="font-display font-black text-ink text-lg sm:text-xl leading-none">RK</span>
-          </span>
+            <img
+              src={logo3}
+              alt="Riyan's Rottu Kadai"
+              className="w-14 h-14 sm:w-16 sm:h-16 rounded-3xl object-contain transition-transform duration-300 group-hover:scale-105"
+            />
+
           <span className="flex flex-col leading-none">
-            <span className="font-display font-extrabold text-white text-base sm:text-lg tracking-wide">
-              ROTTU <span className="text-yolk">KADAI</span>
+            <span className="font-display font-extrabold text-yolk text-base sm:text-lg tracking-wide">
+              RIYAN'S  <span className="text-white">ROTTU KADAI</span>
             </span>
-            <span className="text-[10px] sm:text-[11px] text-smoke tracking-[0.25em] uppercase mt-0.5">
-              Fast Food Since 2015
-            </span>
+
           </span>
         </Link>
 
@@ -58,13 +60,14 @@ export default function Navbar() {
         <ul className="hidden lg:flex items-center gap-9">
           {NAV_LINKS.map((link) => (
             <li key={link.label}>
-              <a
-                href={link.href}
+              <HashLink
+                smooth
+                to={link.href}
                 className="relative text-sm font-semibold text-white/85 hover:text-yolk transition-colors py-2 group"
               >
                 {link.label}
                 <span className="absolute left-0 -bottom-0.5 h-0.5 w-0 bg-yolk transition-all duration-300 group-hover:w-full" />
-              </a>
+              </HashLink>
             </li>
           ))}
         </ul>
@@ -106,12 +109,14 @@ export default function Navbar() {
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: i * 0.05 }}
                 >
-                  <a
-                    href={link.href}
+                  <HashLink
+                    smooth
+                    to={link.href}
+                    onClick={() => setOpen(false)}
                     className="block py-3 text-white/90 font-semibold text-base border-b border-ink-border/60 hover:text-yolk hover:pl-2 transition-all"
                   >
                     {link.label}
-                  </a>
+                  </HashLink>
                 </motion.li>
               ))}
               <a

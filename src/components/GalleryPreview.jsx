@@ -2,12 +2,13 @@ import { motion } from 'framer-motion'
 import { FiImage, FiArrowRight } from 'react-icons/fi'
 
 const IMAGES = [
-  { src: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80', span: 'sm:row-span-2' },
-  { src: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=80', span: '' },
-  { src: 'https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=600&q=80', span: '' },
-  { src: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=600&q=80', span: '' },
-  { src: 'https://images.unsplash.com/photo-1633945274405-b6c8069047b0?auto=format&fit=crop&w=600&q=80', span: 'sm:row-span-2' },
-  { src: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&q=80', span: '' },
+  
+  { src: 'https://i.pinimg.com/1200x/da/ab/58/daab58e2f73abf9c9fef0dbdfbd5009c.jpg',  },
+  { src: 'https://i.pinimg.com/1200x/dd/8e/0d/dd8e0d821ed439f0aecb3574c9709dee.jpg', },
+  { src: 'https://i.pinimg.com/736x/c4/10/06/c41006049b919e5dbbdbb2e972839e5f.jpg', },
+  { src: 'https://i.pinimg.com/736x/e3/e6/9b/e3e69bc7cff447a430913b1fc2a388c0.jpg',  },
+  { src: 'https://i.pinimg.com/1200x/bb/2c/86/bb2c864bb41ee2602b02b58a06b9d9ef.jpg',  },
+  { src: 'https://i.pinimg.com/736x/6a/3d/c4/6a3dc4c03b2c0f5f7760471434390a84.jpg',  },
 ]
 
 export default function GalleryPreview() {
@@ -29,12 +30,7 @@ export default function GalleryPreview() {
               Gallery
             </h2>
           </div>
-          <a
-            href="/gallery"
-            className="inline-flex items-center gap-2 bg-yolk text-ink font-display font-bold px-6 py-3 rounded-full hover:bg-white transition-colors duration-300 w-fit"
-          >
-            <FiImage /> View Gallery <FiArrowRight />
-          </a>
+
         </motion.div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 auto-rows-[140px] sm:auto-rows-[160px] gap-3 sm:gap-4">

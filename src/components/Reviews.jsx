@@ -3,22 +3,22 @@ import { FiStar } from 'react-icons/fi'
 
 const REVIEWS = [
   {
-    name: 'Aravind S.',
+    name: 'Mohamed Asif',
     rating: 5,
-    text: 'The kothu roll here tastes exactly like the roadside stalls I grew up eating near T. Nagar. Genuinely addictive.',
-    role: 'Regular, 3x a week',
-  },
-  {
-    name: 'Priya Menon',
-    rating: 5,
-    text: 'Fast, hot, and cheap without cutting corners on taste. The masala fries are unreal. My office orders from here every Friday.',
+    text: 'One of the best Beef Rottu Kadai in Chennai. The Beef Rottu was soft, flavorful, and served piping hot. Definitely coming back!',
     role: 'Google Review',
   },
   {
-    name: 'Karthik R.',
-    rating: 4,
-    text: 'Loved the chicken 65 burger — crispy and packed with flavour. Would love a bit more spice option, but still my go-to spot.',
-    role: 'Zomato Review',
+    name: 'Sathish Kumar',
+    rating: 5,
+    text: 'The Beef Kothu and Chicken Roll were absolutely delicious. Freshly prepared, generous portions, and excellent value for money.',
+    role: 'Regular Customer',
+  },
+  {
+    name: 'Aisha Rahman',
+    rating: 5,
+    text: 'Loved the authentic street-food taste and the fact that everything is 100% halal. Friendly staff, quick service, and amazing flavors.',
+    role: 'Google Review',
   },
 ]
 

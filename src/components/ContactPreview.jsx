@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { FiMapPin, FiPhone, FiClock } from 'react-icons/fi'
 import { FaWhatsapp } from 'react-icons/fa'
 
-const WHATSAPP_NUMBER = '919876543210'
+const WHATSAPP_NUMBER = "919566013048";
 
 export default function ContactPreview() {
   return (
@@ -19,7 +19,7 @@ export default function ContactPreview() {
             Find Us
           </span>
           <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-white mt-3">
-            Visit The Kadai
+            Visit Riyan's Rottu Kadai
           </h2>
         </motion.div>
 
@@ -37,10 +37,18 @@ export default function ContactPreview() {
                 <FiMapPin />
               </span>
               <div>
-                <p className="font-display font-semibold text-white text-sm mb-1">Address</p>
-                <p className="text-smoke text-sm leading-relaxed">
-                  No. 24, Ranganathan Street, T. Nagar, Chennai, Tamil Nadu 600017
-                </p>
+                <a
+                  href="https://www.google.co.in/maps/place/ROTTU+KADAI/@12.9658334,80.1391523,17z"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-smoke text-sm leading-7 hover:text-yolk transition-colors"
+                >
+                  No. 3, Ramanujam St,<br />
+                  Shiva Shankar Nagar,<br />
+                  Secretariat Colony,<br />
+                  Pallavaram,<br />
+                  Chennai – 600043
+                </a>
               </div>
             </div>
 
@@ -50,8 +58,11 @@ export default function ContactPreview() {
               </span>
               <div>
                 <p className="font-display font-semibold text-white text-sm mb-1">Phone</p>
-                <a href="tel:+919876543210" className="text-smoke text-sm hover:text-yolk transition-colors">
-                  +91 98765 43210
+                <a
+                  href="tel:+919566013048"
+                  className="text-smoke text-sm hover:text-yolk transition-colors"
+                >
+                  +91 95660 13048
                 </a>
               </div>
             </div>
@@ -63,9 +74,8 @@ export default function ContactPreview() {
               <div>
                 <p className="font-display font-semibold text-white text-sm mb-1">Opening Hours</p>
                 <p className="text-smoke text-sm leading-relaxed">
-                  Mon – Sun: 11:00 AM – 11:30 PM
+                  Mon – Sun: 12:30 PM – 11:45 PM
                   <br />
-                  Kitchen closes 15 mins prior
                 </p>
               </div>
             </div>
@@ -90,7 +100,7 @@ export default function ContactPreview() {
           >
             <iframe
               title="Rottu Kadai location map"
-              src="https://www.google.com/maps?q=T.Nagar,Chennai&output=embed"
+              src="https://www.google.com/maps?q=ROTTU+KADAI,+Ramanujam+Street,+Pallavaram,+Chennai&output=embed"
               className="absolute inset-0 w-full h-full grayscale contrast-125 opacity-80"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
@@ -98,11 +108,16 @@ export default function ContactPreview() {
             <div className="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent pointer-events-none" />
             <div className="absolute bottom-4 left-4 right-4 bg-ink/85 backdrop-blur border border-ink-border rounded-2xl p-4 flex items-center justify-between gap-4">
               <div>
-                <p className="font-display font-semibold text-white text-sm">ROTTU KADAI, T. Nagar</p>
-                <p className="text-smoke text-xs">2 mins walk from Panagal Park</p>
+                <p className="font-display font-semibold text-white text-sm">
+                  Riyan's Rottu Kadai
+                </p>
+
+                <p className="text-smoke text-xs">
+                  Ramanujam Street, Pallavaram, Chennai
+                </p>
               </div>
               <a
-                href="https://maps.google.com/?q=T.Nagar,Chennai"
+                href="https://www.google.co.in/maps/place/ROTTU+KADAI/@12.9658334,80.1391523,17z/data=!3m1!4b1!4m6!3m5!1s0x3a525f1abcf15115:0xad177cce6b607d69!8m2!3d12.9658334!4d80.1417272!16s%2Fg%2F11h42mpkz6"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="shrink-0 text-yolk text-xs font-bold uppercase tracking-wide hover:underline"

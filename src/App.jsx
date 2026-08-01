@@ -4,6 +4,7 @@ import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
 import Home from './pages/Home.jsx'
 import PagePlaceholder from './pages/PagePlaceholder.jsx'
+import Menu from './pages/Menu.jsx'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -18,13 +19,10 @@ export default function App() {
     <div className="min-h-screen bg-ink flex flex-col overflow-x-hidden">
       <ScrollToTop />
       <Navbar />
-      <main className="flex-1">
+      <main className="flex-1 pt-20">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route
-            path="/menu"
-            element={<PagePlaceholder title="Full Menu" subtitle="The complete Rottu Kadai menu is being plated up." />}
-          />
+          <Route path="/menu" element={<Menu />} />
           <Route
             path="/gallery"
             element={<PagePlaceholder title="Gallery" subtitle="More sizzling shots coming soon." />}
