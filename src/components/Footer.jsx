@@ -96,7 +96,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-yolk text-ink border border-yolk font-display font-bold shadow-soft hover:bg-white hover:text-ink hover:shadow-glow transition-all duration-300 active:scale-95"
           >
-            <span>Designed by &lt;Zia/&gt; ↗</span>
+            <span>Designed by &lt;ZIA/&gt; ↗</span>
           </a>
         </div>
 

@@ -1,14 +1,30 @@
 import { motion } from 'framer-motion'
 import { FiImage, FiArrowRight } from 'react-icons/fi'
+import img1 from "../assets/img1.jpeg";
+import img2 from "../assets/img2.jpeg";
+import img3 from "../assets/img3.jpeg";
+import img4 from "../assets/img4.jpeg";
+import img5 from "../assets/img5.jpeg";
+import img6 from "../assets/img6.jpeg";
+import img7 from "../assets/img7.jpeg";
+import img8 from "../assets/img8.jpeg";
+import img9 from "../assets/img9.jpeg";
+import img10 from "../assets/img10.png";
 
 const IMAGES = [
-  
-  { src: 'https://i.pinimg.com/1200x/da/ab/58/daab58e2f73abf9c9fef0dbdfbd5009c.jpg',  },
-  { src: 'https://i.pinimg.com/1200x/dd/8e/0d/dd8e0d821ed439f0aecb3574c9709dee.jpg', },
-  { src: 'https://i.pinimg.com/736x/c4/10/06/c41006049b919e5dbbdbb2e972839e5f.jpg', },
-  { src: 'https://i.pinimg.com/736x/e3/e6/9b/e3e69bc7cff447a430913b1fc2a388c0.jpg',  },
-  { src: 'https://i.pinimg.com/1200x/bb/2c/86/bb2c864bb41ee2602b02b58a06b9d9ef.jpg',  },
-  { src: 'https://i.pinimg.com/736x/6a/3d/c4/6a3dc4c03b2c0f5f7760471434390a84.jpg',  },
+
+  { src: img10 },
+  { src: img1 },
+  { src: img2 },
+  { src: img3 },
+  { src: img4 },
+  { src: img5 },
+  { src: img6 },
+  { src: img7 },
+  { src: img8 },
+  { src: img9 },
+
+
 ]
 
 export default function GalleryPreview() {
@@ -33,7 +49,7 @@ export default function GalleryPreview() {
 
         </motion.div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 auto-rows-[140px] sm:auto-rows-[160px] gap-3 sm:gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 auto-rows-[180px] sm:auto-rows-[300px] gap-3 sm:gap-4">
           {IMAGES.map((img, i) => (
             <motion.div
               key={i}
@@ -47,9 +63,14 @@ export default function GalleryPreview() {
                 src={img.src}
                 alt="Rottu Kadai food gallery"
                 loading="lazy"
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                className="w-full h-full object-cover brightness-90 contrast-110 saturate-110 group-hover:brightness-100 group-hover:scale-105 transition-all duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+              {/* Dark Overlay */}
+              <div className="absolute inset-0 bg-black/30 group-hover:bg-black/15 transition-all duration-500" />
+
+              {/* Gold Gradient */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-yellow-500/5 opacity-80" />
             </motion.div>
           ))}
         </div>
