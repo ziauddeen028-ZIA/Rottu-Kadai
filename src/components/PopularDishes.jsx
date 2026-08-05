@@ -1,41 +1,48 @@
 import { motion } from 'framer-motion'
 import { FiPlus } from 'react-icons/fi'
+import b1 from "../assets/b1.png";
+import b2 from "../assets/b2.png";
+import b3 from "../assets/b3.png";
+import b4 from "../assets/b4.png";
+
+
+
 const DISHES = [
   {
     name: "Beef Fried Rice",
-    desc: "Delicious beef fried rice made fresh with our special seasoning.",
+    desc: "Fragrant fried rice tossed with tender beef, fresh vegetables, egg and our signature house seasoning.",
     price: "₹150",
-    img: "https://i.pinimg.com/736x/e3/e6/9b/e3e69bc7cff447a430913b1fc2a388c0.jpg",
+    img: b4,
   },
   {
-    name: "Chicken Fried Rice",
-    desc: "Aromatic fried rice prepared with tender chicken, fresh vegetables and house special sauces.",
-    price: "₹150",
-    img: "https://i.pinimg.com/1200x/da/ab/58/daab58e2f73abf9c9fef0dbdfbd5009c.jpg",
-  },
-  {
-    name: "Tandoori Chicken",
-    desc: "Fresh chicken marinated with authentic spices and grilled to perfection in tandoor style.",
-    price: "₹120",
-    img: "https://i.pinimg.com/1200x/dd/8e/0d/dd8e0d821ed439f0aecb3574c9709dee.jpg",
-  },
-  {
-    name: "Chicken Shawarma",
-    desc: "Soft pita filled with juicy chicken, fresh vegetables and creamy garlic mayonnaise.",
+    name: "Beef Shawarma",
+    desc: "Soft pita bread filled with juicy halal beef, fresh vegetables and creamy garlic mayonnaise.",
     price: "₹90",
     img: "https://i.pinimg.com/736x/c4/10/06/c41006049b919e5dbbdbb2e972839e5f.jpg",
   },
   {
     name: "Beef Sheekh Kabab",
-    desc: "Minced beef blended with herbs and spices, grilled over an open flame until smoky and juicy.",
+    desc: "Minced halal beef blended with aromatic herbs and spices, grilled over an open flame until smoky and juicy.",
     price: "₹100",
     img: "https://i.pinimg.com/1200x/bb/2c/86/bb2c864bb41ee2602b02b58a06b9d9ef.jpg",
   },
   {
-    name: "Chilli Chicken",
-    desc: "Crispy chicken tossed with onions, capsicum and spicy Indo-Chinese chilli sauce.",
-    price: "₹200",
-    img: "https://i.pinimg.com/736x/6a/3d/c4/6a3dc4c03b2c0f5f7760471434390a84.jpg",
+    name: "Beef Vadai",
+    desc: "Crispy minced beef patties seasoned with traditional spices and deep-fried until perfectly golden.",
+    price: "₹20 (2 pcs)",
+    img: b3,
+  },
+  {
+    name: "Tawa Curry",
+    desc: "Rich and spicy beef tawa curry slow-cooked with onions, herbs and authentic masala for a bold smoky flavour.",
+    price: "₹70",
+    img: b2,
+  },
+  {
+    name: "Beef Pakoda",
+    desc: "Tender beef pieces coated in our signature spice blend and fried until crispy and flavourful.",
+    price: "₹70",
+    img: b1,
   },
 ];
 
@@ -54,7 +61,7 @@ export default function PopularDishes() {
             From The Tawa
           </span>
           <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-white mt-3">
-            Popular Dishes
+            Popular Beef Dishes
           </h2>
           <p className="text-smoke mt-4">
             The six dishes our regulars order on repeat — made to order, every single time.

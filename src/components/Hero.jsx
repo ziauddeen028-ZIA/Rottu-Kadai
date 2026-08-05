@@ -21,22 +21,20 @@ export default function Hero() {
         >
           <span className="inline-flex items-center gap-2 bg-ink-card border border-ink-border text-yolk text-xs font-semibold tracking-[0.2em] uppercase px-4 py-2 rounded-full mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-yolk animate-pulse" />
-            Chennai's Own Roadside Flavour
+            Chennai's #1 Beef Spot
           </span>
 
-          <h1 className="font-display font-black leading-[0.95] text-5xl sm:text-6xl lg:text-7xl text-white">
-            HOT • FRESH
+          <h1 className="font-display font-black leading-[0.95] text-5xl sm:text-6xl lg:text-7xl text-yolk">
+              REAL BEEF. 
             <br />
-            <span className="text-yolk"> FULL OF</span>
+            <span className="text-white"> REAL FIRE.</span>
             <br />
-            FLAVOUR
-            
+           <span className="text-white">REAL TASTE.</span>
+
           </h1>
 
           <p className="mt-6 text-smoke text-base sm:text-lg max-w-md mx-auto lg:mx-0">
-            ROTTU KADAI brings the tawa straight to your table — hot rottis,
-            loaded rolls and fast-food favourites, made fresh, served fast,
-            priced fair. No shortcuts, just full flavour.
+            Serving authentic halal beef delicacies, shawarma, tawa specials, rolls and fast-food favourites. Freshly cooked, generously served and packed with the rich taste that keeps Chennai coming back.
           </p>
 
           <div className="mt-9 flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
