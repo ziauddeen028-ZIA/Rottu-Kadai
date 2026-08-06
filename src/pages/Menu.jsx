@@ -35,15 +35,16 @@ export default function Menu() {
                 </div>
 
                 {/* Category Buttons */}
-                <div className="flex flex-wrap justify-center gap-3 mb-16">
+                <div className="grid grid-cols-2 md:flex md:flex-wrap md:justify-center gap-3 mb-12">
                     {categories.map((category) => (
                         <button
                             key={category}
                             onClick={() => setSelectedCategory(category)}
-                            className={`whitespace-nowrap px-7 py-3 rounded-full font-semibold transition-all duration-300 ${selectedCategory === category
-                                ? "bg-yolk text-ink shadow-lg shadow-yolk/20"
-                                : "bg-ink-card border border-white/5 text-white hover:border-yolk hover:text-yolk"
-                                }`}>
+                            className={`w-full md:w-auto px-5 py-3 rounded-full font-semibold transition-all duration-300 text-center ${selectedCategory === category
+                                    ? "bg-yolk text-ink shadow-lg shadow-yolk/20"
+                                    : "bg-ink-card border border-white/5 text-white hover:border-yolk hover:text-yolk"
+                                }`}
+                        >
                             {category}
                         </button>
                     ))}
