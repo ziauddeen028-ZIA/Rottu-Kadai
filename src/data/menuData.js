@@ -56,8 +56,8 @@ export const menuData = [
     category: "Pakoda & Soup",
     items: [
       { name: "Soup (Tail)", price: 30 },
-      { name: "Chicken Pakoda", weight: "100g", price: 70 },
-      { name: "Beef Pakoda", weight: "100g", price: 70 },
+      { name: "Chicken Pakoda", weight: "100g", price: 50 },
+      { name: "Beef Pakoda", weight: "100g", price: 60 },
       { name: "Hariyali Pakoda", weight: "100g", price: 70 },
       { name: "Beef Vadai", quantity: "2 pcs", price: 20 },
       { name: "Beef Phaal", quantity: "1 pc", price: 120 },

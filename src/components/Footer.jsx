@@ -73,6 +73,18 @@ export default function Footer() {
                 +91 9566013048
               </a>
             </li>
+            <li className="flex items-center gap-3 text-smoke text-sm">
+              <FaInstagram className="shrink-0 text-yolk" />
+
+              <a
+                href="https://www.instagram.com/riyans_rottu_kadai_43/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-yolk transition-colors"
+              >
+                @riyans_rottu_kadai_43
+              </a>
+            </li>
 
           </ul>
         </div>

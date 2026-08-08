@@ -4,6 +4,7 @@ import b1 from "../assets/b1.png";
 import b2 from "../assets/b2.png";
 import b3 from "../assets/b3.png";
 import b4 from "../assets/b4.png";
+import beef from "../assets/beef.jpg";
 
 
 
@@ -27,10 +28,10 @@ const DISHES = [
     img: "https://i.pinimg.com/1200x/bb/2c/86/bb2c864bb41ee2602b02b58a06b9d9ef.jpg",
   },
   {
-    name: "Beef Vadai",
-    desc: "Crispy minced beef patties seasoned with traditional spices and deep-fried until perfectly golden.",
-    price: "₹20 (2 pcs)",
-    img: b3,
+    name: "Beef Biriyani",
+    desc: "Fragrant biriyani rice layered with juicy beef, bold spices, and rich masala, cooked to perfection for a truly satisfying feast.",
+    price: "₹130 (Half) ",
+    img: beef,
   },
   {
     name: "Tawa Curry",
