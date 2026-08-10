@@ -57,20 +57,17 @@ export default function GalleryPreview() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.06 }}
-              className={`relative overflow-hidden rounded-2xl group ${img.span}`}
+              className={`relative overflow-hidden rounded-2xl group ${img.span || ""}`}
             >
               <img
                 src={img.src}
-                alt="Rottu Kadai food gallery"
+                alt="Riyan's Rottu Kadai food gallery"
                 loading="lazy"
-                className="w-full h-full object-cover brightness-90 contrast-110 saturate-110 group-hover:brightness-100 group-hover:scale-105 transition-all duration-700"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
 
-              {/* Dark Overlay */}
-              <div className="absolute inset-0 bg-black/30 group-hover:bg-black/15 transition-all duration-500" />
-
-              {/* Gold Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-yellow-500/5 opacity-80" />
+              {/* Subtle hover overlay */}
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-500" />
             </motion.div>
           ))}
         </div>
